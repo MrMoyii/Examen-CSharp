@@ -53,6 +53,8 @@ namespace Examen_Modulo_CSharp
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -213,6 +215,7 @@ namespace Examen_Modulo_CSharp
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.panel2);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Location = new System.Drawing.Point(65, 309);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(233, 97);
@@ -222,9 +225,10 @@ namespace Examen_Modulo_CSharp
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(304, 275);
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(304, 271);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 27);
             this.textBox1.TabIndex = 8;
             // 
             // panel2
@@ -289,9 +293,10 @@ namespace Examen_Modulo_CSharp
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 29);
+            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(97, 26);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 20);
+            this.textBox2.Size = new System.Drawing.Size(118, 27);
             this.textBox2.TabIndex = 10;
             // 
             // label8
@@ -308,9 +313,10 @@ namespace Examen_Modulo_CSharp
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(58, 68);
+            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(58, 63);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 20);
+            this.textBox3.Size = new System.Drawing.Size(157, 27);
             this.textBox3.TabIndex = 12;
             // 
             // button1
@@ -318,15 +324,35 @@ namespace Examen_Modulo_CSharp
             this.button1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 100;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(71, 449);
+            this.button1.Location = new System.Drawing.Point(71, 440);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 29);
+            this.button1.Size = new System.Drawing.Size(161, 45);
             this.button1.TabIndex = 9;
             this.button1.Text = "Cotizar";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.label9.Location = new System.Drawing.Point(313, 454);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 25);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "$";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(358, 448);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(213, 33);
+            this.textBox4.TabIndex = 11;
             // 
             // Form1
             // 
@@ -334,6 +360,8 @@ namespace Examen_Modulo_CSharp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(641, 525);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.textBox1);
@@ -388,6 +416,8 @@ namespace Examen_Modulo_CSharp
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

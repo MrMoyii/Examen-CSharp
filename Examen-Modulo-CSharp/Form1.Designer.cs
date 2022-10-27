@@ -44,7 +44,7 @@ namespace Examen_Modulo_CSharp
             this.lbHistorialCotizaciones = new System.Windows.Forms.Label();
             this.lbCodigoVendedor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPrecioCalculado = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,11 +62,11 @@ namespace Examen_Modulo_CSharp
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rbPantalon = new System.Windows.Forms.RadioButton();
+            this.rbCamisa = new System.Windows.Forms.RadioButton();
+            this.checkChupin = new System.Windows.Forms.CheckBox();
+            this.checkCuelloMao = new System.Windows.Forms.CheckBox();
+            this.checkMangaCorta = new System.Windows.Forms.CheckBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -255,7 +255,7 @@ namespace Examen_Modulo_CSharp
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtPrecioCalculado);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(0, 550);
@@ -263,15 +263,15 @@ namespace Examen_Modulo_CSharp
             this.panel1.Size = new System.Drawing.Size(680, 100);
             this.panel1.TabIndex = 14;
             // 
-            // textBox4
+            // txtPrecioCalculado
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(392, 32);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(213, 33);
-            this.textBox4.TabIndex = 19;
+            this.txtPrecioCalculado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrecioCalculado.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioCalculado.Location = new System.Drawing.Point(392, 32);
+            this.txtPrecioCalculado.Name = "txtPrecioCalculado";
+            this.txtPrecioCalculado.ReadOnly = true;
+            this.txtPrecioCalculado.Size = new System.Drawing.Size(213, 33);
+            this.txtPrecioCalculado.TabIndex = 19;
             // 
             // button1
             // 
@@ -442,9 +442,9 @@ namespace Examen_Modulo_CSharp
             // 
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.checkChupin);
+            this.groupBox1.Controls.Add(this.checkCuelloMao);
+            this.groupBox1.Controls.Add(this.checkMangaCorta);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
             this.groupBox1.Location = new System.Drawing.Point(99, 28);
@@ -469,74 +469,76 @@ namespace Examen_Modulo_CSharp
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.radioButton2);
-            this.panel4.Controls.Add(this.radioButton1);
+            this.panel4.Controls.Add(this.rbPantalon);
+            this.panel4.Controls.Add(this.rbCamisa);
             this.panel4.Location = new System.Drawing.Point(6, 33);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(161, 85);
             this.panel4.TabIndex = 6;
             // 
-            // radioButton2
+            // rbPantalon
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton2.Location = new System.Drawing.Point(15, 53);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(98, 27);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "Pantalón";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbPantalon.AutoSize = true;
+            this.rbPantalon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPantalon.ForeColor = System.Drawing.Color.Gray;
+            this.rbPantalon.Location = new System.Drawing.Point(15, 53);
+            this.rbPantalon.Name = "rbPantalon";
+            this.rbPantalon.Size = new System.Drawing.Size(98, 27);
+            this.rbPantalon.TabIndex = 1;
+            this.rbPantalon.Text = "Pantalón";
+            this.rbPantalon.UseVisualStyleBackColor = true;
+            this.rbPantalon.CheckedChanged += new System.EventHandler(this.rbPantalon_CheckedChanged);
             // 
-            // radioButton1
+            // rbCamisa
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton1.Location = new System.Drawing.Point(15, 1);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(84, 27);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Camisa";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbCamisa.AutoSize = true;
+            this.rbCamisa.Checked = true;
+            this.rbCamisa.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCamisa.ForeColor = System.Drawing.Color.Gray;
+            this.rbCamisa.Location = new System.Drawing.Point(15, 1);
+            this.rbCamisa.Name = "rbCamisa";
+            this.rbCamisa.Size = new System.Drawing.Size(84, 27);
+            this.rbCamisa.TabIndex = 0;
+            this.rbCamisa.TabStop = true;
+            this.rbCamisa.Text = "Camisa";
+            this.rbCamisa.UseVisualStyleBackColor = true;
+            this.rbCamisa.CheckedChanged += new System.EventHandler(this.rbCamisa_CheckedChanged);
             // 
-            // checkBox3
+            // checkChupin
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox3.Location = new System.Drawing.Point(195, 86);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(84, 27);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "Chupín";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkChupin.AutoSize = true;
+            this.checkChupin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkChupin.ForeColor = System.Drawing.Color.Gray;
+            this.checkChupin.Location = new System.Drawing.Point(195, 86);
+            this.checkChupin.Name = "checkChupin";
+            this.checkChupin.Size = new System.Drawing.Size(84, 27);
+            this.checkChupin.TabIndex = 4;
+            this.checkChupin.Text = "Chupín";
+            this.checkChupin.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkCuelloMao
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox2.Location = new System.Drawing.Point(370, 33);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(117, 27);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Cuello mao";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkCuelloMao.AutoSize = true;
+            this.checkCuelloMao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCuelloMao.ForeColor = System.Drawing.Color.Gray;
+            this.checkCuelloMao.Location = new System.Drawing.Point(370, 33);
+            this.checkCuelloMao.Name = "checkCuelloMao";
+            this.checkCuelloMao.Size = new System.Drawing.Size(117, 27);
+            this.checkCuelloMao.TabIndex = 3;
+            this.checkCuelloMao.Text = "Cuello mao";
+            this.checkCuelloMao.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkMangaCorta
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox1.Location = new System.Drawing.Point(195, 34);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 27);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Manga Corta";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkMangaCorta.AutoSize = true;
+            this.checkMangaCorta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkMangaCorta.ForeColor = System.Drawing.Color.Gray;
+            this.checkMangaCorta.Location = new System.Drawing.Point(195, 34);
+            this.checkMangaCorta.Name = "checkMangaCorta";
+            this.checkMangaCorta.Size = new System.Drawing.Size(130, 27);
+            this.checkMangaCorta.TabIndex = 2;
+            this.checkMangaCorta.Text = "Manga Corta";
+            this.checkMangaCorta.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -586,7 +588,7 @@ namespace Examen_Modulo_CSharp
         private System.Windows.Forms.Label lbHistorialCotizaciones;
         private System.Windows.Forms.Label lbCodigoVendedor;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrecioCalculado;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
@@ -603,11 +605,11 @@ namespace Examen_Modulo_CSharp
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton rbPantalon;
+        private System.Windows.Forms.RadioButton rbCamisa;
+        private System.Windows.Forms.CheckBox checkChupin;
+        private System.Windows.Forms.CheckBox checkCuelloMao;
+        private System.Windows.Forms.CheckBox checkMangaCorta;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.PictureBox btnMinimizar;

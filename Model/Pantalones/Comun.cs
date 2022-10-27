@@ -8,5 +8,11 @@ namespace Model.Pantalones
 {
     class Comun : Pantalon
     {
+        public Comun()
+        {
+            CantComun = 500;
+            CantComunPremium = 250;
+            CantComunStandard = 250;
+        }
     }
 }

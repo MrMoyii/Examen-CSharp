@@ -10,24 +10,15 @@ namespace Presenter
 {
     public class Presentador
     {
-        Vendedor vendedor;
-        Tienda tienda;
         private IView view;
         public Presentador(IView view)
         {
-            tienda = new Tienda();
-            vendedor = new Vendedor();
-            ArrayList arrData = new ArrayList();
-            AlamcenarDatos(arrData, tienda, vendedor);
-            view.DisplayData(arrData);
+            this.view = view;
+            ArrayList arr = new ArrayList();
+            arr = this.view.GetInputValues();
+
+
         }
-        static void AlamcenarDatos(ArrayList arrData, Tienda tienda, Vendedor vendedor)
-        {
-            arrData.Add(tienda.Nombre);
-            arrData.Add(tienda.Direccion);
-            arrData.Add(vendedor.Nombre);
-            arrData.Add(vendedor.Apellido);
-            arrData.Add(vendedor.CodigoVendedor);
-        }
+        
     }
 }

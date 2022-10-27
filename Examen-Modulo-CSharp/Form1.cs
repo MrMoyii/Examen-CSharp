@@ -15,12 +15,38 @@ namespace Examen_Modulo_CSharp
 {
     public partial class Form1 : Form, IView
     {
-        Presentador presentador;
+        DatosTiendaYVendedor datosTiendaYVendedor;
         public Form1()
         {
             InitializeComponent();
-            presentador = new Presentador(this);
+            checkChupin.Enabled = false;
+            datosTiendaYVendedor = new DatosTiendaYVendedor(this);
         }
+
+        public void DisplayResult(string result, bool error, string quePaso)
+        {
+            if (error)
+                MessageBox.Show(quePaso, result);
+            else
+                txtPrecioCalculado.Text = result;
+        }
+
+        public ArrayList GetInputValues()
+        {
+            ArrayList datosIngresador = new ArrayList();
+            //datosIngresador.Add();
+
+            return datosIngresador;
+        }
+
+        public void DisplayData(ArrayList datos)
+        {
+            lbNombreTienda.Text = datos[0].ToString();
+            lbDireccionTienda.Text = datos[1].ToString();
+            lbNombreYApellidoVendedor.Text = datos[2] + " " + datos[3];
+            lbCodigoVendedor.Text = datos[4].ToString();
+        }
+
 
         #region Diseño y control del form
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -60,23 +86,21 @@ namespace Examen_Modulo_CSharp
 
         #endregion
 
-
-        public void DisplayResult(string result, bool error, string quePaso)
+        private void rbPantalon_CheckedChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            checkChupin.Enabled = true;
+            checkMangaCorta.Checked = false;
+            checkMangaCorta.Enabled = false;
+            checkCuelloMao.Checked = false;
+            checkCuelloMao.Enabled = false;
         }
 
-        public ArrayList GetInputValues()
+        private void rbCamisa_CheckedChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
-
-        public void DisplayData(ArrayList datos)
-        {
-            lbNombreTienda.Text = datos[0].ToString();
-            lbDireccionTienda.Text = datos[1].ToString();
-            lbNombreYApellidoVendedor.Text = datos[2] + " " + datos[3];
-            lbCodigoVendedor.Text = datos[4].ToString();
+            checkChupin.Enabled = false;
+            checkChupin.Checked = false;
+            checkMangaCorta.Enabled = true;
+            checkCuelloMao.Enabled = true;
         }
     }
 }

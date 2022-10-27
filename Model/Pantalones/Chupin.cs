@@ -8,5 +8,11 @@ namespace Model.Pantalones
 {
     class Chupin : Pantalon
     {
+        public Chupin()
+        {
+            CantChupin = 1500;
+            CantChupinPremium = 750;
+            CantChupinStandard = 750;
+        }
     }
 }

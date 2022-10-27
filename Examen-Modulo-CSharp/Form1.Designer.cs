@@ -31,6 +31,7 @@ namespace Examen_Modulo_CSharp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -58,14 +59,13 @@ namespace Examen_Modulo_CSharp
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -95,6 +95,17 @@ namespace Examen_Modulo_CSharp
             this.BarraTitulo.Size = new System.Drawing.Size(680, 38);
             this.BarraTitulo.TabIndex = 12;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.LightCyan;
+            this.label10.Location = new System.Drawing.Point(12, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(218, 28);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Cotizador Express";
             // 
             // btnMinimizar
             // 
@@ -241,6 +252,7 @@ namespace Examen_Modulo_CSharp
             this.textBox4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(392, 32);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(213, 33);
             this.textBox4.TabIndex = 19;
             // 
@@ -299,7 +311,7 @@ namespace Examen_Modulo_CSharp
             this.groupBox3.Size = new System.Drawing.Size(247, 130);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Precio unitario y cantidad";
+            this.groupBox3.Text = "Cantidad y Precio unitario";
             // 
             // textBox3
             // 
@@ -425,6 +437,19 @@ namespace Examen_Modulo_CSharp
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prenda";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(18, 63);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(467, 14);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "_________________________________________________________________________________" +
+    "__________________________________";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.radioButton2);
@@ -495,30 +520,6 @@ namespace Examen_Modulo_CSharp
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Manga Corta";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.LightCyan;
-            this.label10.Location = new System.Drawing.Point(12, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(218, 28);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Cotizador Express";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(18, 63);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(467, 14);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "_________________________________________________________________________________" +
-    "__________________________________";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

@@ -1,0 +1,5 @@
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Model\bin\Debug\Model.dll
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Model\bin\Debug\Model.pdb
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Model\obj\Debug\Model.dll
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Model\obj\Debug\Model.pdb

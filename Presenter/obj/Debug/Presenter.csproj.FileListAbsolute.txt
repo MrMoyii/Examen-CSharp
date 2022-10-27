@@ -1,0 +1,6 @@
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Presenter\bin\Debug\Presenter.dll
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Presenter\bin\Debug\Presenter.pdb
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Presenter\obj\Debug\Presenter.dll
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Presenter\obj\Debug\Presenter.pdb

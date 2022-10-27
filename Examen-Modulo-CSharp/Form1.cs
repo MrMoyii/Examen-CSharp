@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Presenter;
+using System.Collections;
 
 namespace Examen_Modulo_CSharp
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IView
     {
+        Presentador presentador;
         public Form1()
         {
             InitializeComponent();
+            presentador = new Presentador();
         }
 
 
@@ -57,6 +61,16 @@ namespace Examen_Modulo_CSharp
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        public void DisplayResult(string result, bool error, string quePaso)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ArrayList GetInputValues()
+        {
+            throw new NotImplementedException();
         }
     }
 }

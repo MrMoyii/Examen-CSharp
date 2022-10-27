@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Tienda
+    public class Tienda
     {
-        protected string Nombre;
-        protected string Direccion;
-        protected string ListadoPrendas;
+        public string Nombre = "Distrito Moda";
+        public string Direccion = "Av. Garibaldi 1320";
+        public string ListadoPrendas = "Camisas y Pantalones";
     }
 }

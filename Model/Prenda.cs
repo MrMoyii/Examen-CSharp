@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Prenda
+    abstract class Prenda
     {
         public bool EsPremium { get => EsPremium; set => EsPremium = value; }
         public int PrecioUnitario { get => PrecioUnitario; set => PrecioUnitario = value; }

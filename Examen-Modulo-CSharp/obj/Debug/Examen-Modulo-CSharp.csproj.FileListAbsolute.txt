@@ -11,3 +11,5 @@ D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Examen-Modulo-CSharp
 D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Examen-Modulo-CSharp\bin\Debug\Presenter.dll
 D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Examen-Modulo-CSharp\bin\Debug\Presenter.pdb
 D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Examen-Modulo-CSharp\obj\Debug\Examen-Modulo-CSharp.csproj.CopyComplete
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Examen-Modulo-CSharp\bin\Debug\Model.dll
+D:\Users\omarm\source\QuarkAcademy\POO\Examen-Modulo-CSharp\Examen-Modulo-CSharp\bin\Debug\Model.pdb

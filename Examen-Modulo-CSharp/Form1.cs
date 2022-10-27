@@ -19,11 +19,8 @@ namespace Examen_Modulo_CSharp
         public Form1()
         {
             InitializeComponent();
-            presentador = new Presentador();
+            presentador = new Presentador(this);
         }
-
-
-
 
         #region Diseño y control del form
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -55,13 +52,14 @@ namespace Examen_Modulo_CSharp
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        #endregion
-
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        #endregion
+
 
         public void DisplayResult(string result, bool error, string quePaso)
         {
@@ -71,6 +69,14 @@ namespace Examen_Modulo_CSharp
         public ArrayList GetInputValues()
         {
             throw new NotImplementedException();
+        }
+
+        public void DisplayData(ArrayList datos)
+        {
+            lbNombreTienda.Text = datos[0].ToString();
+            lbDireccionTienda.Text = datos[1].ToString();
+            lbNombreYApellidoVendedor.Text = datos[2] + " " + datos[3];
+            lbCodigoVendedor.Text = datos[4].ToString();
         }
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Vendedor
+    public class Vendedor
     {
-        protected string Nombre;
-        protected string Apellido;
-        protected string CodigoVendedor;
+        public string Nombre = "Pedro";
+        public string Apellido = "Alfonso";
+        public string CodigoVendedor = "123789";
     }
 }

@@ -34,7 +34,13 @@ namespace Examen_Modulo_CSharp
         public ArrayList GetInputValues()
         {
             ArrayList datosIngresador = new ArrayList();
-            //datosIngresador.Add();
+            datosIngresador.Add(rbCamisa.Checked);          //1
+            datosIngresador.Add(rbPantalon.Checked);        //2
+            datosIngresador.Add(checkMangaCorta.Checked);   //3
+            datosIngresador.Add(checkCuelloMao.Checked);    //4
+            datosIngresador.Add(checkChupin.Checked);       //5
+            datosIngresador.Add(rbCamisa.Checked);          //6
+            datosIngresador.Add(rbCamisa.Checked);          //7
 
             return datosIngresador;
         }

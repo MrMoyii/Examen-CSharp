@@ -19,19 +19,45 @@ namespace Presenter
             ArrayList arr = new ArrayList();
             arr = this.view.GetInputValues();
 
-            //si se chequeo Camisa
-            if (bool.Parse(arr[0].ToString()))
+            //si es standard
+            if (bool.Parse(arr[4].ToString()))
             {
-                Camisa camisa = new Camisa();
-                int stockCamisa = camisa.Stock;
-                view.DisplayStock(stockCamisa.ToString());
+                //si se chequeo Camisa
+                if (bool.Parse(arr[0].ToString()))
+                {
+                    Camisa camisa = new Camisa();
+                    int stockCamisa = camisa.Stock;
+                    view.DisplayStock(stockCamisa.ToString());
+
+
+                }
+                //sino toma el pantalon
+                else
+                {
+                    Pantalon pantalon = new Pantalon();
+                    int stockPantalon = pantalon.Stock;
+                    view.DisplayStock(stockPantalon.ToString());
+                }
             }
-            //sino toma el pantalon
+            //sino es Premium
             else
             {
-                Pantalon pantalon = new Pantalon();
-                int stockPantalon = pantalon.Stock;
-                view.DisplayStock(stockPantalon.ToString());
+                //si se chequeo Camisa
+                if (bool.Parse(arr[0].ToString()))
+                {
+                    Camisa camisa = new Camisa();
+                    int stockCamisa = camisa.Stock;
+                    view.DisplayStock(stockCamisa.ToString());
+
+
+                }
+                //sino toma el pantalon
+                else
+                {
+                    Pantalon pantalon = new Pantalon();
+                    int stockPantalon = pantalon.Stock;
+                    view.DisplayStock(stockPantalon.ToString());
+                }
             }
         }
         private static bool Validacion(object dato, string tipoDato)

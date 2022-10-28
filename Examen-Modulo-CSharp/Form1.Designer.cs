@@ -48,6 +48,7 @@ namespace Examen_Modulo_CSharp
             this.btnCotizar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbStock = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@ namespace Examen_Modulo_CSharp
             this.checkChupin = new System.Windows.Forms.CheckBox();
             this.checkCuelloMao = new System.Windows.Forms.CheckBox();
             this.checkMangaCorta = new System.Windows.Forms.CheckBox();
-            this.lbStock = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -315,6 +315,18 @@ namespace Examen_Modulo_CSharp
             this.panel2.Size = new System.Drawing.Size(680, 412);
             this.panel2.TabIndex = 15;
             // 
+            // lbStock
+            // 
+            this.lbStock.AutoSize = true;
+            this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStock.ForeColor = System.Drawing.Color.DimGray;
+            this.lbStock.Location = new System.Drawing.Point(401, 178);
+            this.lbStock.Name = "lbStock";
+            this.lbStock.Size = new System.Drawing.Size(52, 25);
+            this.lbStock.TabIndex = 13;
+            this.lbStock.Text = "_____";
+            this.lbStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtPrecio);
@@ -531,18 +543,6 @@ namespace Examen_Modulo_CSharp
             this.checkMangaCorta.TabIndex = 2;
             this.checkMangaCorta.Text = "Manga Corta";
             this.checkMangaCorta.UseVisualStyleBackColor = true;
-            // 
-            // lbStock
-            // 
-            this.lbStock.AutoSize = true;
-            this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStock.ForeColor = System.Drawing.Color.DimGray;
-            this.lbStock.Location = new System.Drawing.Point(401, 178);
-            this.lbStock.Name = "lbStock";
-            this.lbStock.Size = new System.Drawing.Size(52, 25);
-            this.lbStock.TabIndex = 13;
-            this.lbStock.Text = "_____";
-            this.lbStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

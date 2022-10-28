@@ -42,11 +42,11 @@ namespace Examen_Modulo_CSharp
         public ArrayList GetInputValues()
         {
             ArrayList datosIngresador = new ArrayList();
-            datosIngresador.Add(rbCamisa.Checked);          //1
-            datosIngresador.Add(checkMangaCorta.Checked);   //2
-            datosIngresador.Add(checkCuelloMao.Checked);    //3
-            datosIngresador.Add(checkChupin.Checked);       //4
-            datosIngresador.Add(rbStandard.Checked);        //5
+            datosIngresador.Add(rbCamisa.Checked);          //0
+            datosIngresador.Add(checkMangaCorta.Checked);   //1
+            datosIngresador.Add(checkCuelloMao.Checked);    //2
+            datosIngresador.Add(checkChupin.Checked);       //3
+            datosIngresador.Add(rbStandard.Checked);        //4
 
             return datosIngresador;
         }

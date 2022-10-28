@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Pantalones
 {
-    class Pantalon : Prenda
+    public class Pantalon : Prenda
     {
         protected int CantComun;
         protected int CantComunPremium;

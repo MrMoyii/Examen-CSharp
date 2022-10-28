@@ -66,7 +66,7 @@ namespace Examen_Modulo_CSharp
             this.checkChupin = new System.Windows.Forms.CheckBox();
             this.checkCuelloMao = new System.Windows.Forms.CheckBox();
             this.checkMangaCorta = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbStock = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -305,7 +305,7 @@ namespace Examen_Modulo_CSharp
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbStock);
             this.panel2.Controls.Add(this.groupBox3);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.label6);
@@ -451,7 +451,7 @@ namespace Examen_Modulo_CSharp
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(18, 63);
+            this.label11.Location = new System.Drawing.Point(18, 60);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(467, 14);
             this.label11.TabIndex = 17;
@@ -487,7 +487,7 @@ namespace Examen_Modulo_CSharp
             this.rbCamisa.Checked = true;
             this.rbCamisa.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCamisa.ForeColor = System.Drawing.Color.DimGray;
-            this.rbCamisa.Location = new System.Drawing.Point(15, 1);
+            this.rbCamisa.Location = new System.Drawing.Point(15, -1);
             this.rbCamisa.Name = "rbCamisa";
             this.rbCamisa.Size = new System.Drawing.Size(84, 27);
             this.rbCamisa.TabIndex = 0;
@@ -513,7 +513,7 @@ namespace Examen_Modulo_CSharp
             this.checkCuelloMao.AutoSize = true;
             this.checkCuelloMao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkCuelloMao.ForeColor = System.Drawing.Color.DimGray;
-            this.checkCuelloMao.Location = new System.Drawing.Point(370, 33);
+            this.checkCuelloMao.Location = new System.Drawing.Point(368, 32);
             this.checkCuelloMao.Name = "checkCuelloMao";
             this.checkCuelloMao.Size = new System.Drawing.Size(117, 27);
             this.checkCuelloMao.TabIndex = 3;
@@ -525,24 +525,24 @@ namespace Examen_Modulo_CSharp
             this.checkMangaCorta.AutoSize = true;
             this.checkMangaCorta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkMangaCorta.ForeColor = System.Drawing.Color.DimGray;
-            this.checkMangaCorta.Location = new System.Drawing.Point(195, 34);
+            this.checkMangaCorta.Location = new System.Drawing.Point(195, 32);
             this.checkMangaCorta.Name = "checkMangaCorta";
             this.checkMangaCorta.Size = new System.Drawing.Size(130, 27);
             this.checkMangaCorta.TabIndex = 2;
             this.checkMangaCorta.Text = "Manga Corta";
             this.checkMangaCorta.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lbStock
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(401, 178);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 25);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "_____";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbStock.AutoSize = true;
+            this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStock.ForeColor = System.Drawing.Color.DimGray;
+            this.lbStock.Location = new System.Drawing.Point(401, 178);
+            this.lbStock.Name = "lbStock";
+            this.lbStock.Size = new System.Drawing.Size(52, 25);
+            this.lbStock.TabIndex = 13;
+            this.lbStock.Text = "_____";
+            this.lbStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -620,7 +620,7 @@ namespace Examen_Modulo_CSharp
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbStock;
     }
 }
 

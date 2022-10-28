@@ -16,9 +16,12 @@ namespace Examen_Modulo_CSharp
     public partial class Form1 : Form, IView
     {
         DatosTiendaYVendedor datosTiendaYVendedor;
+        PresentadorStock presentadorStock;
         public Form1()
         {
             InitializeComponent();
+            //lo llamo para mostrar el stock de camisa que inicialmente se encuentra en true
+            presentadorStock = new PresentadorStock(this);
             checkChupin.Enabled = false;
             datosTiendaYVendedor = new DatosTiendaYVendedor(this);
         }
@@ -31,20 +34,24 @@ namespace Examen_Modulo_CSharp
                 txtPrecioCalculado.Text = result;
         }
 
+        public void DisplayStock(string data)
+        {
+            lbStock.Text = data;
+        }
+
         public ArrayList GetInputValues()
         {
             ArrayList datosIngresador = new ArrayList();
             datosIngresador.Add(rbCamisa.Checked);          //1
-            datosIngresador.Add(rbPantalon.Checked);        //2
-            datosIngresador.Add(checkMangaCorta.Checked);   //3
-            datosIngresador.Add(checkCuelloMao.Checked);    //4
-            datosIngresador.Add(checkChupin.Checked);       //5
-            datosIngresador.Add(rbCamisa.Checked);          //6
-            datosIngresador.Add(rbCamisa.Checked);          //7
+            datosIngresador.Add(checkMangaCorta.Checked);   //2
+            datosIngresador.Add(checkCuelloMao.Checked);    //3
+            datosIngresador.Add(checkChupin.Checked);       //4
+            datosIngresador.Add(rbStandard.Checked);        //5
 
             return datosIngresador;
         }
 
+        //muestra los datos al inicio del programa
         public void DisplayData(ArrayList datos)
         {
             lbNombreTienda.Text = datos[0].ToString();
@@ -52,7 +59,6 @@ namespace Examen_Modulo_CSharp
             lbNombreYApellidoVendedor.Text = datos[2] + " " + datos[3];
             lbCodigoVendedor.Text = datos[4].ToString();
         }
-
 
         #region Diseño y control del form
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -99,6 +105,8 @@ namespace Examen_Modulo_CSharp
             checkMangaCorta.Enabled = false;
             checkCuelloMao.Checked = false;
             checkCuelloMao.Enabled = false;
+            presentadorStock = new PresentadorStock(this);
+
         }
 
         private void rbCamisa_CheckedChanged(object sender, EventArgs e)
@@ -107,6 +115,7 @@ namespace Examen_Modulo_CSharp
             checkChupin.Checked = false;
             checkMangaCorta.Enabled = true;
             checkCuelloMao.Enabled = true;
+            presentadorStock = new PresentadorStock(this);
         }
     }
 }

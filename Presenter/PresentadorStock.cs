@@ -19,65 +19,73 @@ namespace Presenter
             ArrayList arr = new ArrayList();
             arr = this.view.GetInputValues();
 
-            //si se chequeo Camisa
-            if (bool.Parse(arr[0].ToString()))
+            //si se seleccionado Standard
+            if (bool.Parse(arr[4].ToString()))
             {
-                Camisa camisa = new Camisa();
-                int stockCamisa = camisa.Stock;
-                view.DisplayStock(stockCamisa.ToString());
-                //si se seleccionado Standard
-                if (bool.Parse(arr[4].ToString()))
+                //si se chequeo Camisa
+                if (bool.Parse(arr[0].ToString()))
                 {
-                    //si se seleccionan ambas se muestra la cantidad de manga corta con cuello mao y standard
+                    Camisa camisa = new Camisa();
+                    int stockCamisa = camisa.Stock;
+                    view.DisplayStock(stockCamisa.ToString());
+
+                    #region MangaCorta
+                    //si se marco manga corta y cuello mao, muestra su cantidad
                     if (bool.Parse(arr[1].ToString()) && bool.Parse(arr[2].ToString()))
                     {
                         MangaCorta mangaC = new MangaCorta();
                         view.DisplayStock(mangaC.CantCuelloMaoStandard.ToString());
                     }
-                    //si se seleccionan manga corta se muestra la cantidad de cuello comun y standard
+                    //si se marco manga corta, muestra su cantidad
                     if (bool.Parse(arr[1].ToString()))
                     {
                         MangaCorta mangaC = new MangaCorta();
-                        view.DisplayStock(mangaC.CantCuelloComunStandard.ToString());
+                        view.DisplayStock(mangaC.Stock.ToString());
                     }
-                    //si se seleccionan cuello mao se muestra la cantidad de manga larga y standard
+                    //si se marco cuello mao, muestra la cantidad
                     if (bool.Parse(arr[2].ToString()))
                     {
-                        MangaLarga mangaL = new MangaLarga();
+                        MangaCorta mangaL = new MangaCorta();
                         view.DisplayStock(mangaL.CantCuelloMaoStandard.ToString());
                     }
+                    //si se marco cuello comun, muestra la cantidad
+                    if (bool.Parse(arr[6].ToString()))
+                    {
+                        MangaCorta mangaL = new MangaCorta();
+                        view.DisplayStock(mangaL.CantCuelloComunStandard.ToString());
+                    }
+                    #endregion
                 }
-                //sino la prenda es premium
+                //sino, se chequeo el pantalon
                 else
                 {
-                    //si se seleccionan ambas se muestra la cantidad de manga corta con cuello mao y premium
-                    if (bool.Parse(arr[1].ToString()) && bool.Parse(arr[2].ToString()))
-                    {
-                        MangaCorta mangaC = new MangaCorta();
-                        view.DisplayStock(mangaC.CantCuelloMaoPremium.ToString());
-                    }
-                    //si se seleccionan manga corta se muestra la cantidad de cuello comun y premium
-                    if (bool.Parse(arr[1].ToString()))
-                    {
-                        MangaCorta mangaC = new MangaCorta();
-                        view.DisplayStock(mangaC.CantCuelloComunPremium.ToString());
-                    }
-                    //si se seleccionan cuello mao se muestra la cantidad de manga larga y premium
-                    if (bool.Parse(arr[2].ToString()))
-                    {
-                        MangaLarga mangaL = new MangaLarga();
-                        view.DisplayStock(mangaL.CantCuelloMaoPremium.ToString());
-                    }
+                    Pantalon pantalon = new Pantalon();
+                    int stockPantalon = pantalon.Stock;
+                    view.DisplayStock(stockPantalon.ToString());
                 }
-                
-
             }
-            //sino toma el pantalon
+            //sino la prenda es premium
             else
             {
-                Pantalon pantalon = new Pantalon();
-                int stockPantalon = pantalon.Stock;
-                view.DisplayStock(stockPantalon.ToString());
+
+                //si se seleccionan ambas se muestra la cantidad de manga corta con cuello mao y premium
+                if (bool.Parse(arr[1].ToString()) && bool.Parse(arr[2].ToString()))
+                {
+                    MangaCorta mangaC = new MangaCorta();
+                    view.DisplayStock(mangaC.CantCuelloMaoPremium.ToString());
+                }
+                //si se seleccionan manga corta se muestra la cantidad de cuello comun y premium
+                if (bool.Parse(arr[1].ToString()))
+                {
+                    MangaCorta mangaC = new MangaCorta();
+                    view.DisplayStock(mangaC.CantCuelloComunPremium.ToString());
+                }
+                //si se seleccionan cuello mao se muestra la cantidad de manga larga y premium
+                if (bool.Parse(arr[2].ToString()))
+                {
+                    MangaLarga mangaL = new MangaLarga();
+                    view.DisplayStock(mangaL.CantCuelloMaoPremium.ToString());
+                }
             }
         }
         private static bool Validacion(object dato, string tipoDato)

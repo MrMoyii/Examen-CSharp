@@ -22,7 +22,6 @@ namespace Examen_Modulo_CSharp
             InitializeComponent();
             //lo llamo para mostrar el stock de camisa que inicialmente se encuentra en true
             presentadorStock = new PresentadorStock(this);
-            checkChupin.Enabled = false;
             datosTiendaYVendedor = new DatosTiendaYVendedor(this);
         }
 
@@ -47,6 +46,9 @@ namespace Examen_Modulo_CSharp
             datosIngresador.Add(checkCuelloMao.Checked);    //2
             datosIngresador.Add(checkChupin.Checked);       //3
             datosIngresador.Add(rbStandard.Checked);        //4
+            datosIngresador.Add(checkMangaLarga.Checked);   //5
+            datosIngresador.Add(checkCuelloComun.Checked);  //6
+            datosIngresador.Add(checkPantalonComun.Checked);//7
 
             return datosIngresador;
         }
@@ -98,34 +100,56 @@ namespace Examen_Modulo_CSharp
 
         #endregion
 
+        #region Logica de Vista
         private void rbPantalon_CheckedChanged(object sender, EventArgs e)
         {
             checkChupin.Enabled = true;
+            checkPantalonComun.Enabled = true;
             checkMangaCorta.Checked = false;
             checkMangaCorta.Enabled = false;
             checkCuelloMao.Checked = false;
             checkCuelloMao.Enabled = false;
+            checkCuelloComun.Checked = false;
+            checkCuelloComun.Enabled = false;
+            checkMangaLarga.Checked = false;
+            checkMangaLarga.Enabled = false;
             presentadorStock = new PresentadorStock(this);
-
         }
 
         private void rbCamisa_CheckedChanged(object sender, EventArgs e)
         {
             checkChupin.Enabled = false;
             checkChupin.Checked = false;
+            checkPantalonComun.Checked = false;
+            checkPantalonComun.Enabled = false;
             checkMangaCorta.Enabled = true;
             checkCuelloMao.Enabled = true;
+            checkCuelloComun.Enabled = true;
+            checkMangaLarga.Enabled = true;
             presentadorStock = new PresentadorStock(this);
         }
 
         private void checkMangaCorta_CheckedChanged(object sender, EventArgs e)
         {
             presentadorStock = new PresentadorStock(this);
+            checkMangaLarga.Checked = false;
         }
-
+        private void checkMangaLarga_CheckedChanged(object sender, EventArgs e)
+        {
+            presentadorStock = new PresentadorStock(this);
+            checkMangaCorta.Checked = false;
+        }
         private void checkCuelloMao_CheckedChanged(object sender, EventArgs e)
         {
             presentadorStock = new PresentadorStock(this);
+            checkCuelloComun.Checked = false;
         }
+        private void checkCuelloComun_CheckedChanged(object sender, EventArgs e)
+        {
+            presentadorStock = new PresentadorStock(this);
+            checkCuelloMao.Checked = false;
+        }
+        #endregion
+
     }
 }

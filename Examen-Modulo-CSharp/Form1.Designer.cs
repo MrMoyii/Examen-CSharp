@@ -48,6 +48,7 @@ namespace Examen_Modulo_CSharp
             this.btnCotizar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbStock = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,6 +60,9 @@ namespace Examen_Modulo_CSharp
             this.rbStandard = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkPantalonComun = new System.Windows.Forms.CheckBox();
+            this.checkCuelloComun = new System.Windows.Forms.CheckBox();
+            this.checkMangaLarga = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rbPantalon = new System.Windows.Forms.RadioButton();
@@ -66,10 +70,6 @@ namespace Examen_Modulo_CSharp
             this.checkChupin = new System.Windows.Forms.CheckBox();
             this.checkCuelloMao = new System.Windows.Forms.CheckBox();
             this.checkMangaCorta = new System.Windows.Forms.CheckBox();
-            this.lbStock = new System.Windows.Forms.Label();
-            this.checkMangaLarga = new System.Windows.Forms.CheckBox();
-            this.checkCuelloComun = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -318,6 +318,18 @@ namespace Examen_Modulo_CSharp
             this.panel2.Size = new System.Drawing.Size(680, 412);
             this.panel2.TabIndex = 15;
             // 
+            // lbStock
+            // 
+            this.lbStock.AutoSize = true;
+            this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStock.ForeColor = System.Drawing.Color.DimGray;
+            this.lbStock.Location = new System.Drawing.Point(406, 210);
+            this.lbStock.Name = "lbStock";
+            this.lbStock.Size = new System.Drawing.Size(52, 25);
+            this.lbStock.TabIndex = 13;
+            this.lbStock.Text = "_____";
+            this.lbStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtPrecio);
@@ -435,7 +447,7 @@ namespace Examen_Modulo_CSharp
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.checkPantalonComun);
             this.groupBox1.Controls.Add(this.checkCuelloComun);
             this.groupBox1.Controls.Add(this.checkMangaLarga);
             this.groupBox1.Controls.Add(this.label11);
@@ -451,6 +463,45 @@ namespace Examen_Modulo_CSharp
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prenda";
+            // 
+            // checkPantalonComun
+            // 
+            this.checkPantalonComun.AutoSize = true;
+            this.checkPantalonComun.Enabled = false;
+            this.checkPantalonComun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkPantalonComun.ForeColor = System.Drawing.Color.DimGray;
+            this.checkPantalonComun.Location = new System.Drawing.Point(364, 134);
+            this.checkPantalonComun.Name = "checkPantalonComun";
+            this.checkPantalonComun.Size = new System.Drawing.Size(84, 27);
+            this.checkPantalonComun.TabIndex = 20;
+            this.checkPantalonComun.Text = "Comun";
+            this.checkPantalonComun.UseVisualStyleBackColor = true;
+            // 
+            // checkCuelloComun
+            // 
+            this.checkCuelloComun.AutoSize = true;
+            this.checkCuelloComun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCuelloComun.ForeColor = System.Drawing.Color.DimGray;
+            this.checkCuelloComun.Location = new System.Drawing.Point(364, 33);
+            this.checkCuelloComun.Name = "checkCuelloComun";
+            this.checkCuelloComun.Size = new System.Drawing.Size(136, 27);
+            this.checkCuelloComun.TabIndex = 19;
+            this.checkCuelloComun.Text = "Cuello comun";
+            this.checkCuelloComun.UseVisualStyleBackColor = true;
+            this.checkCuelloComun.CheckedChanged += new System.EventHandler(this.checkCuelloComun_CheckedChanged);
+            // 
+            // checkMangaLarga
+            // 
+            this.checkMangaLarga.AutoSize = true;
+            this.checkMangaLarga.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkMangaLarga.ForeColor = System.Drawing.Color.DimGray;
+            this.checkMangaLarga.Location = new System.Drawing.Point(195, 70);
+            this.checkMangaLarga.Name = "checkMangaLarga";
+            this.checkMangaLarga.Size = new System.Drawing.Size(129, 27);
+            this.checkMangaLarga.TabIndex = 18;
+            this.checkMangaLarga.Text = "Manga Larga";
+            this.checkMangaLarga.UseVisualStyleBackColor = true;
+            this.checkMangaLarga.CheckedChanged += new System.EventHandler(this.checkMangaLarga_CheckedChanged);
             // 
             // label11
             // 
@@ -505,6 +556,7 @@ namespace Examen_Modulo_CSharp
             // checkChupin
             // 
             this.checkChupin.AutoSize = true;
+            this.checkChupin.Enabled = false;
             this.checkChupin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkChupin.ForeColor = System.Drawing.Color.DimGray;
             this.checkChupin.Location = new System.Drawing.Point(195, 134);
@@ -539,54 +591,6 @@ namespace Examen_Modulo_CSharp
             this.checkMangaCorta.Text = "Manga Corta";
             this.checkMangaCorta.UseVisualStyleBackColor = true;
             this.checkMangaCorta.CheckedChanged += new System.EventHandler(this.checkMangaCorta_CheckedChanged);
-            // 
-            // lbStock
-            // 
-            this.lbStock.AutoSize = true;
-            this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStock.ForeColor = System.Drawing.Color.DimGray;
-            this.lbStock.Location = new System.Drawing.Point(406, 210);
-            this.lbStock.Name = "lbStock";
-            this.lbStock.Size = new System.Drawing.Size(52, 25);
-            this.lbStock.TabIndex = 13;
-            this.lbStock.Text = "_____";
-            this.lbStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // checkMangaLarga
-            // 
-            this.checkMangaLarga.AutoSize = true;
-            this.checkMangaLarga.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkMangaLarga.ForeColor = System.Drawing.Color.DimGray;
-            this.checkMangaLarga.Location = new System.Drawing.Point(195, 70);
-            this.checkMangaLarga.Name = "checkMangaLarga";
-            this.checkMangaLarga.Size = new System.Drawing.Size(129, 27);
-            this.checkMangaLarga.TabIndex = 18;
-            this.checkMangaLarga.Text = "Manga Larga";
-            this.checkMangaLarga.UseVisualStyleBackColor = true;
-            // 
-            // checkCuelloComun
-            // 
-            this.checkCuelloComun.AutoSize = true;
-            this.checkCuelloComun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkCuelloComun.ForeColor = System.Drawing.Color.DimGray;
-            this.checkCuelloComun.Location = new System.Drawing.Point(364, 33);
-            this.checkCuelloComun.Name = "checkCuelloComun";
-            this.checkCuelloComun.Size = new System.Drawing.Size(136, 27);
-            this.checkCuelloComun.TabIndex = 19;
-            this.checkCuelloComun.Text = "Cuello comun";
-            this.checkCuelloComun.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBox2.Location = new System.Drawing.Point(364, 134);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(84, 27);
-            this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "Comun";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -667,7 +671,7 @@ namespace Examen_Modulo_CSharp
         private System.Windows.Forms.Label lbStock;
         private System.Windows.Forms.CheckBox checkMangaLarga;
         private System.Windows.Forms.CheckBox checkCuelloComun;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkPantalonComun;
     }
 }
 

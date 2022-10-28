@@ -67,6 +67,9 @@ namespace Examen_Modulo_CSharp
             this.checkCuelloMao = new System.Windows.Forms.CheckBox();
             this.checkMangaCorta = new System.Windows.Forms.CheckBox();
             this.lbStock = new System.Windows.Forms.Label();
+            this.checkMangaLarga = new System.Windows.Forms.CheckBox();
+            this.checkCuelloComun = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -323,7 +326,7 @@ namespace Examen_Modulo_CSharp
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
-            this.groupBox3.Location = new System.Drawing.Point(358, 230);
+            this.groupBox3.Location = new System.Drawing.Point(358, 252);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(247, 130);
             this.groupBox3.TabIndex = 15;
@@ -376,7 +379,7 @@ namespace Examen_Modulo_CSharp
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
-            this.groupBox2.Location = new System.Drawing.Point(99, 230);
+            this.groupBox2.Location = new System.Drawing.Point(99, 252);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(233, 130);
             this.groupBox2.TabIndex = 14;
@@ -423,7 +426,7 @@ namespace Examen_Modulo_CSharp
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(95, 178);
+            this.label6.Location = new System.Drawing.Point(100, 210);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(315, 25);
             this.label6.TabIndex = 13;
@@ -432,6 +435,9 @@ namespace Examen_Modulo_CSharp
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.checkCuelloComun);
+            this.groupBox1.Controls.Add(this.checkMangaLarga);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.checkChupin);
@@ -439,9 +445,9 @@ namespace Examen_Modulo_CSharp
             this.groupBox1.Controls.Add(this.checkMangaCorta);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
-            this.groupBox1.Location = new System.Drawing.Point(99, 28);
+            this.groupBox1.Location = new System.Drawing.Point(99, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(506, 124);
+            this.groupBox1.Size = new System.Drawing.Size(506, 179);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prenda";
@@ -451,7 +457,7 @@ namespace Examen_Modulo_CSharp
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(18, 60);
+            this.label11.Location = new System.Drawing.Point(18, 94);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(467, 14);
             this.label11.TabIndex = 17;
@@ -465,7 +471,7 @@ namespace Examen_Modulo_CSharp
             this.panel4.Controls.Add(this.rbCamisa);
             this.panel4.Location = new System.Drawing.Point(6, 33);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(161, 85);
+            this.panel4.Size = new System.Drawing.Size(161, 140);
             this.panel4.TabIndex = 6;
             // 
             // rbPantalon
@@ -473,7 +479,7 @@ namespace Examen_Modulo_CSharp
             this.rbPantalon.AutoSize = true;
             this.rbPantalon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPantalon.ForeColor = System.Drawing.Color.DimGray;
-            this.rbPantalon.Location = new System.Drawing.Point(15, 53);
+            this.rbPantalon.Location = new System.Drawing.Point(15, 101);
             this.rbPantalon.Name = "rbPantalon";
             this.rbPantalon.Size = new System.Drawing.Size(98, 27);
             this.rbPantalon.TabIndex = 1;
@@ -487,7 +493,7 @@ namespace Examen_Modulo_CSharp
             this.rbCamisa.Checked = true;
             this.rbCamisa.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCamisa.ForeColor = System.Drawing.Color.DimGray;
-            this.rbCamisa.Location = new System.Drawing.Point(15, -1);
+            this.rbCamisa.Location = new System.Drawing.Point(15, 21);
             this.rbCamisa.Name = "rbCamisa";
             this.rbCamisa.Size = new System.Drawing.Size(84, 27);
             this.rbCamisa.TabIndex = 0;
@@ -501,7 +507,7 @@ namespace Examen_Modulo_CSharp
             this.checkChupin.AutoSize = true;
             this.checkChupin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkChupin.ForeColor = System.Drawing.Color.DimGray;
-            this.checkChupin.Location = new System.Drawing.Point(195, 86);
+            this.checkChupin.Location = new System.Drawing.Point(195, 134);
             this.checkChupin.Name = "checkChupin";
             this.checkChupin.Size = new System.Drawing.Size(84, 27);
             this.checkChupin.TabIndex = 4;
@@ -513,36 +519,74 @@ namespace Examen_Modulo_CSharp
             this.checkCuelloMao.AutoSize = true;
             this.checkCuelloMao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkCuelloMao.ForeColor = System.Drawing.Color.DimGray;
-            this.checkCuelloMao.Location = new System.Drawing.Point(368, 32);
+            this.checkCuelloMao.Location = new System.Drawing.Point(364, 70);
             this.checkCuelloMao.Name = "checkCuelloMao";
             this.checkCuelloMao.Size = new System.Drawing.Size(117, 27);
             this.checkCuelloMao.TabIndex = 3;
             this.checkCuelloMao.Text = "Cuello mao";
             this.checkCuelloMao.UseVisualStyleBackColor = true;
+            this.checkCuelloMao.CheckedChanged += new System.EventHandler(this.checkCuelloMao_CheckedChanged);
             // 
             // checkMangaCorta
             // 
             this.checkMangaCorta.AutoSize = true;
             this.checkMangaCorta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkMangaCorta.ForeColor = System.Drawing.Color.DimGray;
-            this.checkMangaCorta.Location = new System.Drawing.Point(195, 32);
+            this.checkMangaCorta.Location = new System.Drawing.Point(195, 33);
             this.checkMangaCorta.Name = "checkMangaCorta";
             this.checkMangaCorta.Size = new System.Drawing.Size(130, 27);
             this.checkMangaCorta.TabIndex = 2;
             this.checkMangaCorta.Text = "Manga Corta";
             this.checkMangaCorta.UseVisualStyleBackColor = true;
+            this.checkMangaCorta.CheckedChanged += new System.EventHandler(this.checkMangaCorta_CheckedChanged);
             // 
             // lbStock
             // 
             this.lbStock.AutoSize = true;
             this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStock.ForeColor = System.Drawing.Color.DimGray;
-            this.lbStock.Location = new System.Drawing.Point(401, 178);
+            this.lbStock.Location = new System.Drawing.Point(406, 210);
             this.lbStock.Name = "lbStock";
             this.lbStock.Size = new System.Drawing.Size(52, 25);
             this.lbStock.TabIndex = 13;
             this.lbStock.Text = "_____";
             this.lbStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkMangaLarga
+            // 
+            this.checkMangaLarga.AutoSize = true;
+            this.checkMangaLarga.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkMangaLarga.ForeColor = System.Drawing.Color.DimGray;
+            this.checkMangaLarga.Location = new System.Drawing.Point(195, 70);
+            this.checkMangaLarga.Name = "checkMangaLarga";
+            this.checkMangaLarga.Size = new System.Drawing.Size(129, 27);
+            this.checkMangaLarga.TabIndex = 18;
+            this.checkMangaLarga.Text = "Manga Larga";
+            this.checkMangaLarga.UseVisualStyleBackColor = true;
+            // 
+            // checkCuelloComun
+            // 
+            this.checkCuelloComun.AutoSize = true;
+            this.checkCuelloComun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCuelloComun.ForeColor = System.Drawing.Color.DimGray;
+            this.checkCuelloComun.Location = new System.Drawing.Point(364, 33);
+            this.checkCuelloComun.Name = "checkCuelloComun";
+            this.checkCuelloComun.Size = new System.Drawing.Size(136, 27);
+            this.checkCuelloComun.TabIndex = 19;
+            this.checkCuelloComun.Text = "Cuello comun";
+            this.checkCuelloComun.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.ForeColor = System.Drawing.Color.DimGray;
+            this.checkBox2.Location = new System.Drawing.Point(364, 134);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(84, 27);
+            this.checkBox2.TabIndex = 20;
+            this.checkBox2.Text = "Comun";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -621,6 +665,9 @@ namespace Examen_Modulo_CSharp
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbStock;
+        private System.Windows.Forms.CheckBox checkMangaLarga;
+        private System.Windows.Forms.CheckBox checkCuelloComun;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

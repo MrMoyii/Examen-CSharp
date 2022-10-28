@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Camisas
 {
-    class MangaLarga : Camisa
+    public class MangaLarga : Camisa
     {
         public MangaLarga()
         {

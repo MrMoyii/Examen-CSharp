@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Model.Camisas
 {
-    class MangaCorta : Camisa
+    public class MangaCorta : Camisa
     {
         public MangaCorta()
         {
             Stock = 500;
 
-            CantCuelloComun = 350;
-            CantCuelloComunPremium = 175;
-            CantCuelloComunStandard = 175;
+            CantCuelloComun = 300;
+            CantCuelloComunPremium = 150;
+            CantCuelloComunStandard = 150;
 
-            CantCuelloMao = 150;
-            CantCuelloMaoPremium = 75;
-            CantCuelloMaoStandard = 75;
+            CantCuelloMao = 200;
+            CantCuelloMaoPremium = 100;
+            CantCuelloMaoStandard = 100;
         }
     }
 }

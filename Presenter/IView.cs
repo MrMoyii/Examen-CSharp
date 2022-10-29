@@ -13,6 +13,7 @@ namespace Presenter
         void DisplayData(ArrayList datos);
         void DisplayResult(string result, bool error, string quePaso);
         void DisplayStock(string data);
+        void DisplayStockPremium(string data);
 
         //para el modelo
         ArrayList GetInputValues();

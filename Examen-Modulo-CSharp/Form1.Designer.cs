@@ -60,9 +60,6 @@ namespace Examen_Modulo_CSharp
             this.rbStandard = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkPantalonComun = new System.Windows.Forms.CheckBox();
-            this.checkCuelloComun = new System.Windows.Forms.CheckBox();
-            this.checkMangaLarga = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rbPantalon = new System.Windows.Forms.RadioButton();
@@ -70,6 +67,8 @@ namespace Examen_Modulo_CSharp
             this.checkChupin = new System.Windows.Forms.CheckBox();
             this.checkCuelloMao = new System.Windows.Forms.CheckBox();
             this.checkMangaCorta = new System.Windows.Forms.CheckBox();
+            this.labelStock = new System.Windows.Forms.Label();
+            this.lbStockStandardOPremium = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -323,7 +322,7 @@ namespace Examen_Modulo_CSharp
             this.lbStock.AutoSize = true;
             this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStock.ForeColor = System.Drawing.Color.DimGray;
-            this.lbStock.Location = new System.Drawing.Point(406, 210);
+            this.lbStock.Location = new System.Drawing.Point(421, 171);
             this.lbStock.Name = "lbStock";
             this.lbStock.Size = new System.Drawing.Size(52, 25);
             this.lbStock.TabIndex = 13;
@@ -338,7 +337,7 @@ namespace Examen_Modulo_CSharp
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
-            this.groupBox3.Location = new System.Drawing.Point(358, 252);
+            this.groupBox3.Location = new System.Drawing.Point(358, 220);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(247, 130);
             this.groupBox3.TabIndex = 15;
@@ -387,11 +386,13 @@ namespace Examen_Modulo_CSharp
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbStockStandardOPremium);
+            this.groupBox2.Controls.Add(this.labelStock);
             this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
-            this.groupBox2.Location = new System.Drawing.Point(99, 252);
+            this.groupBox2.Location = new System.Drawing.Point(99, 220);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(233, 130);
             this.groupBox2.TabIndex = 14;
@@ -402,9 +403,9 @@ namespace Examen_Modulo_CSharp
             // 
             this.panel3.Controls.Add(this.rbPremium);
             this.panel3.Controls.Add(this.rbStandard);
-            this.panel3.Location = new System.Drawing.Point(21, 26);
+            this.panel3.Location = new System.Drawing.Point(6, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(161, 94);
+            this.panel3.Size = new System.Drawing.Size(227, 42);
             this.panel3.TabIndex = 7;
             // 
             // rbPremium
@@ -412,7 +413,7 @@ namespace Examen_Modulo_CSharp
             this.rbPremium.AutoSize = true;
             this.rbPremium.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPremium.ForeColor = System.Drawing.Color.DimGray;
-            this.rbPremium.Location = new System.Drawing.Point(15, 55);
+            this.rbPremium.Location = new System.Drawing.Point(118, 4);
             this.rbPremium.Name = "rbPremium";
             this.rbPremium.Size = new System.Drawing.Size(109, 30);
             this.rbPremium.TabIndex = 1;
@@ -425,7 +426,7 @@ namespace Examen_Modulo_CSharp
             this.rbStandard.Checked = true;
             this.rbStandard.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbStandard.ForeColor = System.Drawing.Color.DimGray;
-            this.rbStandard.Location = new System.Drawing.Point(15, 12);
+            this.rbStandard.Location = new System.Drawing.Point(3, 4);
             this.rbStandard.Name = "rbStandard";
             this.rbStandard.Size = new System.Drawing.Size(107, 30);
             this.rbStandard.TabIndex = 0;
@@ -438,7 +439,7 @@ namespace Examen_Modulo_CSharp
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(100, 210);
+            this.label6.Location = new System.Drawing.Point(100, 171);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(315, 25);
             this.label6.TabIndex = 13;
@@ -447,9 +448,6 @@ namespace Examen_Modulo_CSharp
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkPantalonComun);
-            this.groupBox1.Controls.Add(this.checkCuelloComun);
-            this.groupBox1.Controls.Add(this.checkMangaLarga);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.checkChupin);
@@ -459,56 +457,17 @@ namespace Examen_Modulo_CSharp
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
             this.groupBox1.Location = new System.Drawing.Point(99, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(506, 179);
+            this.groupBox1.Size = new System.Drawing.Size(506, 137);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prenda";
-            // 
-            // checkPantalonComun
-            // 
-            this.checkPantalonComun.AutoSize = true;
-            this.checkPantalonComun.Enabled = false;
-            this.checkPantalonComun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkPantalonComun.ForeColor = System.Drawing.Color.DimGray;
-            this.checkPantalonComun.Location = new System.Drawing.Point(364, 134);
-            this.checkPantalonComun.Name = "checkPantalonComun";
-            this.checkPantalonComun.Size = new System.Drawing.Size(84, 27);
-            this.checkPantalonComun.TabIndex = 20;
-            this.checkPantalonComun.Text = "Comun";
-            this.checkPantalonComun.UseVisualStyleBackColor = true;
-            // 
-            // checkCuelloComun
-            // 
-            this.checkCuelloComun.AutoSize = true;
-            this.checkCuelloComun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkCuelloComun.ForeColor = System.Drawing.Color.DimGray;
-            this.checkCuelloComun.Location = new System.Drawing.Point(364, 33);
-            this.checkCuelloComun.Name = "checkCuelloComun";
-            this.checkCuelloComun.Size = new System.Drawing.Size(136, 27);
-            this.checkCuelloComun.TabIndex = 19;
-            this.checkCuelloComun.Text = "Cuello comun";
-            this.checkCuelloComun.UseVisualStyleBackColor = true;
-            this.checkCuelloComun.CheckedChanged += new System.EventHandler(this.checkCuelloComun_CheckedChanged);
-            // 
-            // checkMangaLarga
-            // 
-            this.checkMangaLarga.AutoSize = true;
-            this.checkMangaLarga.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkMangaLarga.ForeColor = System.Drawing.Color.DimGray;
-            this.checkMangaLarga.Location = new System.Drawing.Point(195, 70);
-            this.checkMangaLarga.Name = "checkMangaLarga";
-            this.checkMangaLarga.Size = new System.Drawing.Size(129, 27);
-            this.checkMangaLarga.TabIndex = 18;
-            this.checkMangaLarga.Text = "Manga Larga";
-            this.checkMangaLarga.UseVisualStyleBackColor = true;
-            this.checkMangaLarga.CheckedChanged += new System.EventHandler(this.checkMangaLarga_CheckedChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(18, 94);
+            this.label11.Location = new System.Drawing.Point(18, 67);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(467, 14);
             this.label11.TabIndex = 17;
@@ -522,7 +481,7 @@ namespace Examen_Modulo_CSharp
             this.panel4.Controls.Add(this.rbCamisa);
             this.panel4.Location = new System.Drawing.Point(6, 33);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(161, 140);
+            this.panel4.Size = new System.Drawing.Size(161, 88);
             this.panel4.TabIndex = 6;
             // 
             // rbPantalon
@@ -530,7 +489,7 @@ namespace Examen_Modulo_CSharp
             this.rbPantalon.AutoSize = true;
             this.rbPantalon.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbPantalon.ForeColor = System.Drawing.Color.DimGray;
-            this.rbPantalon.Location = new System.Drawing.Point(15, 101);
+            this.rbPantalon.Location = new System.Drawing.Point(15, 60);
             this.rbPantalon.Name = "rbPantalon";
             this.rbPantalon.Size = new System.Drawing.Size(98, 27);
             this.rbPantalon.TabIndex = 1;
@@ -544,7 +503,7 @@ namespace Examen_Modulo_CSharp
             this.rbCamisa.Checked = true;
             this.rbCamisa.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCamisa.ForeColor = System.Drawing.Color.DimGray;
-            this.rbCamisa.Location = new System.Drawing.Point(15, 21);
+            this.rbCamisa.Location = new System.Drawing.Point(15, 3);
             this.rbCamisa.Name = "rbCamisa";
             this.rbCamisa.Size = new System.Drawing.Size(84, 27);
             this.rbCamisa.TabIndex = 0;
@@ -559,7 +518,7 @@ namespace Examen_Modulo_CSharp
             this.checkChupin.Enabled = false;
             this.checkChupin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkChupin.ForeColor = System.Drawing.Color.DimGray;
-            this.checkChupin.Location = new System.Drawing.Point(195, 134);
+            this.checkChupin.Location = new System.Drawing.Point(195, 94);
             this.checkChupin.Name = "checkChupin";
             this.checkChupin.Size = new System.Drawing.Size(84, 27);
             this.checkChupin.TabIndex = 4;
@@ -571,7 +530,7 @@ namespace Examen_Modulo_CSharp
             this.checkCuelloMao.AutoSize = true;
             this.checkCuelloMao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkCuelloMao.ForeColor = System.Drawing.Color.DimGray;
-            this.checkCuelloMao.Location = new System.Drawing.Point(364, 70);
+            this.checkCuelloMao.Location = new System.Drawing.Point(364, 37);
             this.checkCuelloMao.Name = "checkCuelloMao";
             this.checkCuelloMao.Size = new System.Drawing.Size(117, 27);
             this.checkCuelloMao.TabIndex = 3;
@@ -584,13 +543,37 @@ namespace Examen_Modulo_CSharp
             this.checkMangaCorta.AutoSize = true;
             this.checkMangaCorta.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkMangaCorta.ForeColor = System.Drawing.Color.DimGray;
-            this.checkMangaCorta.Location = new System.Drawing.Point(195, 33);
+            this.checkMangaCorta.Location = new System.Drawing.Point(195, 37);
             this.checkMangaCorta.Name = "checkMangaCorta";
             this.checkMangaCorta.Size = new System.Drawing.Size(130, 27);
             this.checkMangaCorta.TabIndex = 2;
             this.checkMangaCorta.Text = "Manga Corta";
             this.checkMangaCorta.UseVisualStyleBackColor = true;
             this.checkMangaCorta.CheckedChanged += new System.EventHandler(this.checkMangaCorta_CheckedChanged);
+            // 
+            // labelStock
+            // 
+            this.labelStock.AutoSize = true;
+            this.labelStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStock.ForeColor = System.Drawing.Color.DimGray;
+            this.labelStock.Location = new System.Drawing.Point(34, 89);
+            this.labelStock.Name = "labelStock";
+            this.labelStock.Size = new System.Drawing.Size(71, 25);
+            this.labelStock.TabIndex = 16;
+            this.labelStock.Text = "Stock:";
+            this.labelStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbStockStandardOPremium
+            // 
+            this.lbStockStandardOPremium.AutoSize = true;
+            this.lbStockStandardOPremium.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStockStandardOPremium.ForeColor = System.Drawing.Color.DimGray;
+            this.lbStockStandardOPremium.Location = new System.Drawing.Point(109, 89);
+            this.lbStockStandardOPremium.Name = "lbStockStandardOPremium";
+            this.lbStockStandardOPremium.Size = new System.Drawing.Size(52, 25);
+            this.lbStockStandardOPremium.TabIndex = 16;
+            this.lbStockStandardOPremium.Text = "_____";
+            this.lbStockStandardOPremium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -621,6 +604,7 @@ namespace Examen_Modulo_CSharp
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -669,9 +653,8 @@ namespace Examen_Modulo_CSharp
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbStock;
-        private System.Windows.Forms.CheckBox checkMangaLarga;
-        private System.Windows.Forms.CheckBox checkCuelloComun;
-        private System.Windows.Forms.CheckBox checkPantalonComun;
+        private System.Windows.Forms.Label lbStockStandardOPremium;
+        private System.Windows.Forms.Label labelStock;
     }
 }
 

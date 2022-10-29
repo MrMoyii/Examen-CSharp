@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Pantalones
 {
-    class Chupin : Pantalon
+    public class Chupin : Pantalon
     {
         public Chupin()
         {

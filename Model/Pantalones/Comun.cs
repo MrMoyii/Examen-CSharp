@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Pantalones
 {
-    class Comun : Pantalon
+    public class Comun : Pantalon
     {
         public Comun()
         {

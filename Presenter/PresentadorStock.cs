@@ -71,6 +71,7 @@ namespace Presenter
                 Chupin chupin = new Chupin();
                 Comun pantalonComun = new Comun();
 
+                #region Logica Pantalon
                 //si se marco chupin
                 if (bool.Parse(arr[3].ToString()))
                 {
@@ -92,6 +93,7 @@ namespace Presenter
                     //muestra stock
                     view.DisplayStock(pantalonComun.CantComun.ToString());
                 }
+                #endregion
             }
         }
     }

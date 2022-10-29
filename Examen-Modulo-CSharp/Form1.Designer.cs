@@ -291,6 +291,7 @@ namespace Examen_Modulo_CSharp
             this.btnCotizar.TabIndex = 17;
             this.btnCotizar.Text = "Cotizar";
             this.btnCotizar.UseVisualStyleBackColor = false;
+            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
             // 
             // label9
             // 

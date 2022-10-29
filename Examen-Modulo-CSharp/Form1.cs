@@ -15,14 +15,14 @@ namespace Examen_Modulo_CSharp
 {
     public partial class Form1 : Form, IView
     {
-        DatosTiendaYVendedor datosTiendaYVendedor;
+        PresentadorTiendaYVendedor datosTiendaYVendedor;
         PresentadorStock presentadorStock;
         public Form1()
         {
             InitializeComponent();
             //lo llamo para mostrar el stock de camisa que inicialmente se encuentra en true
             presentadorStock = new PresentadorStock(this);
-            datosTiendaYVendedor = new DatosTiendaYVendedor(this);
+            datosTiendaYVendedor = new PresentadorTiendaYVendedor(this);
         }
 
         public void DisplayResult(string result, bool error, string quePaso)
@@ -45,11 +45,17 @@ namespace Examen_Modulo_CSharp
         public ArrayList GetInputValues()
         {
             ArrayList datosIngresador = new ArrayList();
+            
+            //datos para la logica de aplicacion
             datosIngresador.Add(rbCamisa.Checked);          //0
             datosIngresador.Add(checkMangaCorta.Checked);   //1
             datosIngresador.Add(checkCuelloMao.Checked);    //2
             datosIngresador.Add(checkChupin.Checked);       //3
             datosIngresador.Add(rbStandard.Checked);        //4
+
+            //datos par la logica de negocio
+            datosIngresador.Add(txtCantidad);   //5
+            datosIngresador.Add(txtPrecio);     //6
 
             return datosIngresador;
         }
@@ -134,5 +140,10 @@ namespace Examen_Modulo_CSharp
             presentadorStock = new PresentadorStock(this);
         }
         #endregion
+
+        private void btnCotizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

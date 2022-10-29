@@ -14,6 +14,7 @@ namespace Model.Pantalones
         private int cantChupin;
         private int cantChupinPremium;
         private int cantChupinStandard;
+
         public Pantalon()
         {
             Stock = 2000;

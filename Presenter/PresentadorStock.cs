@@ -71,41 +71,27 @@ namespace Presenter
                 Chupin chupin = new Chupin();
                 Comun pantalonComun = new Comun();
 
-                //si no se marco nada
-                if (!bool.Parse(arr[3].ToString()))
+                //si se marco chupin
+                if (bool.Parse(arr[3].ToString()))
                 {
-                    if (bool.Parse(arr[4].ToString()))
-                        view.DisplayStockPremium(pantalonComun.CantChupinStandard.ToString());
-                    else
-                        view.DisplayStockPremium(pantalonComun.CantChupinPremium.ToString());
-                    view.DisplayStock(pantalonComun.CantComun.ToString());
-                }
-                else
-                {
+                    //si es entandard
                     if (bool.Parse(arr[4].ToString()))
                         view.DisplayStockPremium(chupin.CantChupinStandard.ToString());
                     else
                         view.DisplayStockPremium(chupin.CantChupinPremium.ToString());
-                    view.DisplayStock(chupin.CantComun.ToString());
+                    //muestra stock
+                    view.DisplayStock(chupin.CantChupin.ToString());
                 }
-            }
-        }
-        private static bool Validacion(object dato, string tipoDato)
-        {
-            switch (tipoDato)
-            {
-                case "int":
-                    return int.TryParse(dato.ToString(), out _);
-
-                case "string":
-
-                    if (string.IsNullOrEmpty(dato.ToString().Trim()))
-                        return false;
+                else
+                {
+                    //si es entandard
+                    if (bool.Parse(arr[4].ToString()))
+                        view.DisplayStockPremium(pantalonComun.CantComunStandard.ToString());
                     else
-                        return true;
-
-                default:
-                    return false;
+                        view.DisplayStockPremium(pantalonComun.CantComunPremium.ToString());
+                    //muestra stock
+                    view.DisplayStock(pantalonComun.CantComun.ToString());
+                }
             }
         }
     }

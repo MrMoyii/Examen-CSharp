@@ -55,6 +55,8 @@ namespace Examen_Modulo_CSharp
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbStockStandardOPremium = new System.Windows.Forms.Label();
+            this.labelStock = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rbPremium = new System.Windows.Forms.RadioButton();
             this.rbStandard = new System.Windows.Forms.RadioButton();
@@ -67,8 +69,6 @@ namespace Examen_Modulo_CSharp
             this.checkChupin = new System.Windows.Forms.CheckBox();
             this.checkCuelloMao = new System.Windows.Forms.CheckBox();
             this.checkMangaCorta = new System.Windows.Forms.CheckBox();
-            this.labelStock = new System.Windows.Forms.Label();
-            this.lbStockStandardOPremium = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -394,10 +394,34 @@ namespace Examen_Modulo_CSharp
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(150)))));
             this.groupBox2.Location = new System.Drawing.Point(99, 220);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(233, 130);
+            this.groupBox2.Size = new System.Drawing.Size(238, 130);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Calidad de Prenda";
+            // 
+            // lbStockStandardOPremium
+            // 
+            this.lbStockStandardOPremium.AutoSize = true;
+            this.lbStockStandardOPremium.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStockStandardOPremium.ForeColor = System.Drawing.Color.DimGray;
+            this.lbStockStandardOPremium.Location = new System.Drawing.Point(109, 89);
+            this.lbStockStandardOPremium.Name = "lbStockStandardOPremium";
+            this.lbStockStandardOPremium.Size = new System.Drawing.Size(52, 25);
+            this.lbStockStandardOPremium.TabIndex = 16;
+            this.lbStockStandardOPremium.Text = "_____";
+            this.lbStockStandardOPremium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelStock
+            // 
+            this.labelStock.AutoSize = true;
+            this.labelStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStock.ForeColor = System.Drawing.Color.DimGray;
+            this.labelStock.Location = new System.Drawing.Point(34, 89);
+            this.labelStock.Name = "labelStock";
+            this.labelStock.Size = new System.Drawing.Size(71, 25);
+            this.labelStock.TabIndex = 16;
+            this.labelStock.Text = "Stock:";
+            this.labelStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -524,6 +548,7 @@ namespace Examen_Modulo_CSharp
             this.checkChupin.TabIndex = 4;
             this.checkChupin.Text = "Chupín";
             this.checkChupin.UseVisualStyleBackColor = true;
+            this.checkChupin.CheckedChanged += new System.EventHandler(this.checkChupin_CheckedChanged);
             // 
             // checkCuelloMao
             // 
@@ -550,30 +575,6 @@ namespace Examen_Modulo_CSharp
             this.checkMangaCorta.Text = "Manga Corta";
             this.checkMangaCorta.UseVisualStyleBackColor = true;
             this.checkMangaCorta.CheckedChanged += new System.EventHandler(this.checkMangaCorta_CheckedChanged);
-            // 
-            // labelStock
-            // 
-            this.labelStock.AutoSize = true;
-            this.labelStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStock.ForeColor = System.Drawing.Color.DimGray;
-            this.labelStock.Location = new System.Drawing.Point(34, 89);
-            this.labelStock.Name = "labelStock";
-            this.labelStock.Size = new System.Drawing.Size(71, 25);
-            this.labelStock.TabIndex = 16;
-            this.labelStock.Text = "Stock:";
-            this.labelStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbStockStandardOPremium
-            // 
-            this.lbStockStandardOPremium.AutoSize = true;
-            this.lbStockStandardOPremium.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStockStandardOPremium.ForeColor = System.Drawing.Color.DimGray;
-            this.lbStockStandardOPremium.Location = new System.Drawing.Point(109, 89);
-            this.lbStockStandardOPremium.Name = "lbStockStandardOPremium";
-            this.lbStockStandardOPremium.Size = new System.Drawing.Size(52, 25);
-            this.lbStockStandardOPremium.TabIndex = 16;
-            this.lbStockStandardOPremium.Text = "_____";
-            this.lbStockStandardOPremium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

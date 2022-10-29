@@ -129,7 +129,10 @@ namespace Examen_Modulo_CSharp
         {
             presentadorStock = new PresentadorStock(this);
         }
+        private void checkChupin_CheckedChanged(object sender, EventArgs e)
+        {
+            presentadorStock = new PresentadorStock(this);
+        }
         #endregion
-
     }
 }

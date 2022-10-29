@@ -17,6 +17,7 @@ namespace Examen_Modulo_CSharp
     {
         PresentadorTiendaYVendedor datosTiendaYVendedor;
         PresentadorStock presentadorStock;
+        Presentador presentador;
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace Examen_Modulo_CSharp
             else
                 txtPrecioCalculado.Text = result;
         }
-
         public void DisplayStock(string data)
         {
             lbStock.Text = data;
@@ -54,8 +54,8 @@ namespace Examen_Modulo_CSharp
             datosIngresador.Add(rbStandard.Checked);        //4
 
             //datos par la logica de negocio
-            datosIngresador.Add(txtCantidad);   //5
-            datosIngresador.Add(txtPrecio);     //6
+            datosIngresador.Add(txtCantidad.Text);   //5
+            datosIngresador.Add(txtPrecio.Text);     //6
 
             return datosIngresador;
         }
@@ -143,7 +143,7 @@ namespace Examen_Modulo_CSharp
 
         private void btnCotizar_Click(object sender, EventArgs e)
         {
-
+            presentador = new Presentador(this);
         }
     }
 }

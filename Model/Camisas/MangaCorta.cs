@@ -20,5 +20,10 @@ namespace Model.Camisas
             CantCuelloMaoPremium = 100;
             CantCuelloMaoStandard = 100;
         }
+        public double calcularPrecio()
+        {
+
+            return 1.2;
+        }
     }
 }

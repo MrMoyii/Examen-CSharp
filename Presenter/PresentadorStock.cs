@@ -16,8 +16,7 @@ namespace Presenter
         public PresentadorStock(IView view)
         {
             this.view = view;
-            ArrayList arr = new ArrayList();
-            arr = this.view.GetInputValues();
+            ArrayList arr = this.view.GetInputValues();
 
             //si se chequeo Camisa
             if (bool.Parse(arr[0].ToString()))

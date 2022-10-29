@@ -8,10 +8,11 @@ namespace Model
 {
     public abstract class Prenda
     {
-        public bool EsPremium { get => EsPremium; set => EsPremium = value; }
-        public int PrecioUnitario { get => PrecioUnitario; set => PrecioUnitario = value; }
-
+        private bool esPremium;
         private int stock;
+        private int precioUnitario;
+        public bool EsPremium { get => esPremium; set => esPremium = value; }
+        public int PrecioUnitario { get => precioUnitario; set => precioUnitario = value; }
         public int Stock { get => stock; set => stock = value; }
     }
 }

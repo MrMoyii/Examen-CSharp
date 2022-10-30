@@ -20,10 +20,28 @@ namespace Model.Camisas
             CantCuelloMaoPremium = 100;
             CantCuelloMaoStandard = 100;
         }
-        public double calcularPrecio()
+        public float CalcularDescuentoMangaCorta()
         {
-
-            return 1.2;
+            float precioBase = CalcularPrecioUnitarioXCantidad();
+            return precioBase - (precioBase * 0.1f); // --> descuento del 10%
+        }
+        public float CalcularDescuentoMangaCortaMasPremium()
+        {
+            float precioBase = CalcularDescuentoMangaCorta();           // --> descuento del 10%
+            precioBase += CalcularAumentoPremium_Parametro(precioBase); // --> aumento del 30%
+            return precioBase; // --> descuento del 10% + aumento del 30%
+        }
+        public float CalcularDescuentoMangaCortaYCuelloMao()
+        {
+            float precioBase = CalcularDescuentoMangaCorta();           // --> descuento del 10%
+            precioBase += CalcularAumentoCuelloMao_Parametro(precioBase);// --> aumento del 3%
+            return precioBase; // --> descuento del 10% + aumento del 3%
+        }
+        public float CalcularDescuentoMangaCortaYCuelloMaoPremium()
+        {
+            float precioBase = CalcularDescuentoMangaCortaYCuelloMao(); // --> descuento del 10% + aumento del 3%
+            precioBase += CalcularAumentoPremium_Parametro(precioBase);  // --> aumento del 30%
+            return precioBase; // --> descuento del 10% + aumento del 3% + aumento del 30%
         }
     }
 }

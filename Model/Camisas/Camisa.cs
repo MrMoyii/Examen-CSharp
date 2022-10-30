@@ -26,5 +26,21 @@ namespace Model.Camisas
         public int CantCuelloMao { get => cantCuelloMao; set => cantCuelloMao = value; }
         public int CantCuelloMaoPremium { get => cantCuelloMaoPremium; set => cantCuelloMaoPremium = value; }
         public int CantCuelloMaoStandard { get => cantCuelloMaoStandard; set => cantCuelloMaoStandard = value; }
+
+        public float CalcularAumentoCuelloMao()
+        {
+            float precioBase = CalcularPrecioUnitarioXCantidad();
+            return precioBase + (precioBase * 0.03f); // --> aumento del 3%
+        }
+        public float CalcularAumentoCuelloMao_Parametro(float precioBase)
+        {
+            return precioBase * 0.03f; // --> aumento del 3%
+        }
+        public float CalcularAumentoCuelloMaoMasPremium()
+        {
+            float precioBase = CalcularAumentoCuelloMao(); // --> aumento del 3%
+            precioBase += CalcularAumentoPremium_Parametro(precioBase); // --> aumento del 30%
+            return precioBase; 
+        }
     }
 }

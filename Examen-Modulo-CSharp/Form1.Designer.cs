@@ -323,11 +323,8 @@ namespace Examen_Modulo_CSharp
             this.lbStock.AutoSize = true;
             this.lbStock.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStock.ForeColor = System.Drawing.Color.DimGray;
-<<<<<<< HEAD
             this.lbStock.Location = new System.Drawing.Point(401, 178);
-=======
             this.lbStock.Location = new System.Drawing.Point(421, 171);
->>>>>>> 774241a
             this.lbStock.Name = "lbStock";
             this.lbStock.Size = new System.Drawing.Size(52, 25);
             this.lbStock.TabIndex = 13;
@@ -579,10 +576,7 @@ namespace Examen_Modulo_CSharp
             this.checkMangaCorta.TabIndex = 2;
             this.checkMangaCorta.Text = "Manga Corta";
             this.checkMangaCorta.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
-=======
             this.checkMangaCorta.CheckedChanged += new System.EventHandler(this.checkMangaCorta_CheckedChanged);
->>>>>>> 774241a
             // 
             // Form1
             // 

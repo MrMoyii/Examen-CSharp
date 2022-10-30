@@ -45,23 +45,15 @@ namespace Examen_Modulo_CSharp
         public ArrayList GetInputValues()
         {
             ArrayList datosIngresador = new ArrayList();
-<<<<<<< HEAD
-=======
-            
             //datos para la logica de aplicacion
->>>>>>> 774241a
             datosIngresador.Add(rbCamisa.Checked);          //0
             datosIngresador.Add(checkMangaCorta.Checked);   //1
             datosIngresador.Add(checkCuelloMao.Checked);    //2
             datosIngresador.Add(checkChupin.Checked);       //3
             datosIngresador.Add(rbStandard.Checked);        //4
-<<<<<<< HEAD
-=======
-
             //datos par la logica de negocio
             datosIngresador.Add(txtCantidad.Text);   //5
             datosIngresador.Add(txtPrecio.Text);     //6
->>>>>>> 774241a
 
             return datosIngresador;
         }

@@ -18,55 +18,9 @@ namespace Presenter
             this.view = view;
             ArrayList arr = this.view.GetInputValues();
 
-            //si es standard
-            if (bool.Parse(arr[4].ToString()))
+            //si se chequeo Camisa
+            if (bool.Parse(arr[0].ToString()))
             {
-<<<<<<< HEAD
-                //si se chequeo Camisa
-                if (bool.Parse(arr[0].ToString()))
-                {
-                    Camisa camisa = new Camisa();
-                    int stockCamisa = camisa.Stock;
-                    view.DisplayStock(stockCamisa.ToString());
-
-
-                }
-                //sino toma el pantalon
-                else
-                {
-                    Pantalon pantalon = new Pantalon();
-                    int stockPantalon = pantalon.Stock;
-                    view.DisplayStock(stockPantalon.ToString());
-                }
-            }
-            //sino es Premium
-            else
-            {
-                //si se chequeo Camisa
-                if (bool.Parse(arr[0].ToString()))
-                {
-                    Camisa camisa = new Camisa();
-                    int stockCamisa = camisa.Stock;
-                    view.DisplayStock(stockCamisa.ToString());
-
-
-                }
-                //sino toma el pantalon
-                else
-                {
-                    Pantalon pantalon = new Pantalon();
-                    int stockPantalon = pantalon.Stock;
-                    view.DisplayStock(stockPantalon.ToString());
-                }
-            }
-        }
-        private static bool Validacion(object dato, string tipoDato)
-        {
-            switch (tipoDato)
-            {
-                case "int":
-                    return int.TryParse(dato.ToString(), out _);
-=======
                 MangaLarga mangaL = new MangaLarga();
                 MangaCorta mangaC = new MangaCorta();
 
@@ -115,7 +69,6 @@ namespace Presenter
             {
                 Chupin chupin = new Chupin();
                 Comun pantalonComun = new Comun();
->>>>>>> 774241a
 
                 #region Logica Pantalon
                 //si se marco chupin

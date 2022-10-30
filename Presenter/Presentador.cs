@@ -54,30 +54,22 @@ namespace Presenter
                 //si no se marco nada
                 if (!bool.Parse(arr[2].ToString()) && !bool.Parse(arr[1].ToString()))
                 {
-                    if (bool.Parse(arr[4].ToString()))
+                    //standard
+                    if (bool.Parse(arr[4].ToString())) //arr[4] --> standard
                     {
-                        //si la cantidad ingresado es mayor a la cantidad de cuello comun standard, se emite un error
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaL.CantCuelloComunStandard.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                            //manda a la vista el precio unitario por la cantidad
-                            valorprecio = mangaL.CalcularPrecioUnitarioXCantidad();
-                            this.view.DisplayResult(valorprecio.ToString(), false, "no paso nada jeje");
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaL, view, "MangaLargaCuelloComunStandard"))
+                            return;// -->si ocurre un error salgo
+                        //calculo
+                        valorprecio = mangaL.CalcularPrecioUnitarioXCantidad();
+                        //manda a la vista el precio unitario por la cantidad
+                        this.view.DisplayResult(valorprecio.ToString(), false, "no paso nada jeje");
                     }
                     else 
                     {
-                        //si la cantidad ingresado es mayor a la cantidad de cuello comun premium, se emite un error
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaL.CantCuelloComunPremium.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                        {
-                            //aplico aumento por ser premium del 30% y manda a la vista
-                            this.view.DisplayResult(mangaL.CalcularAumentoPremium().ToString(), false, "no paso nada jeje");
-                        }
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaL, view, "MangaLargaCuelloComunPremium"))
+                            return;
+                        //aplico aumento por ser premium del 30% y manda a la vista
+                        this.view.DisplayResult(mangaL.CalcularAumentoPremium().ToString(), false, "no paso nada jeje");
                     }
                 }
                 //si se marco Manga corta unicamente
@@ -86,25 +78,17 @@ namespace Presenter
                     //si se marco standard
                     if (bool.Parse(arr[4].ToString()))
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaC.CantCuelloComunStandard.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                            //aplico descuento del 10% y manda a la vista
-                            this.view.DisplayResult(mangaC.CalcularDescuentoMangaCorta().ToString(), false, "no paso nada jeje");
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaC, view, "MangaCortaCuelloComunStandard"))
+                            return;
+                        //aplico descuento del 10% y manda a la vista
+                        this.view.DisplayResult(mangaC.CalcularDescuentoMangaCorta().ToString(), false, "no paso nada jeje");
                     }
                     else
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaC.CantCuelloComunPremium.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                        {
-                            //aplico aumento por ser premium del 30% y manda a la vista
-                            this.view.DisplayResult(mangaC.CalcularDescuentoMangaCortaMasPremium().ToString(), false, "no paso nada jeje");
-                        }
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaC, view, "MangaCortaCuelloComunPremium"))
+                            return;
+                        //aplico aumento por ser premium del 30% y manda a la vista
+                        this.view.DisplayResult(mangaC.CalcularDescuentoMangaCortaMasPremium().ToString(), false, "no paso nada jeje");
                     }
                 }
                 //si se marco Cuello Mao unicamente
@@ -113,25 +97,17 @@ namespace Presenter
                     //si se marco standard
                     if (bool.Parse(arr[4].ToString()))
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaL.CantCuelloMaoStandard.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                            //aplico aumento del 3% y manda a la vista
-                            this.view.DisplayResult(mangaL.CalcularAumentoCuelloMao().ToString(), false, "no paso nada jeje");
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaL, view, "MangaLargaCuelloMaoStandard"))
+                            return;
+                        //aplico aumento del 3% y manda a la vista
+                        this.view.DisplayResult(mangaL.CalcularAumentoCuelloMao().ToString(), false, "no paso nada jeje");
                     }
                     else
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaL.CantCuelloMaoPremium.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                        {
-                            //aplico aumento por ser premium del 30% y manda a la vista
-                            this.view.DisplayResult(mangaL.CalcularAumentoCuelloMaoMasPremium().ToString(), false, "no paso nada jeje");
-                        }
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaL, view, "MangaLargaCuelloMaoPremium"))
+                            return;
+                        //aplico aumento por ser premium del 30% y manda a la vista
+                        this.view.DisplayResult(mangaL.CalcularAumentoCuelloMaoMasPremium().ToString(), false, "no paso nada jeje");
                     }
                 }
                 //si se marco Manga corta && Cuello Mao
@@ -140,32 +116,15 @@ namespace Presenter
                     //si es standard muestra
                     if (bool.Parse(arr[4].ToString()))
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaC.CantCuelloMaoStandard.ToString()))
-                        {
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                            return;
-                        }
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                        {
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                            return;
-                        }
-                            
-                        else
-                            //aplico descuento del 10% + aumento del 3% y mando a la vista
-                            this.view.DisplayResult(mangaC.CalcularDescuentoMangaCortaYCuelloMao().ToString(), false, "no paso nada jeje");
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaC, view, "MangaCortaCuelloMaoStandard")) return;
+                        //aplico descuento del 10% + aumento del 3% y mando a la vista
+                        this.view.DisplayResult(mangaC.CalcularDescuentoMangaCortaYCuelloMao().ToString(), false, "no paso nada jeje");
                     }
                     else
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(mangaC.CantCuelloMaoStandard.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                        {
-                            //aplico aumento por ser premium del 30% y manda a la vista
-                            this.view.DisplayResult(mangaC.CalcularDescuentoMangaCortaYCuelloMaoPremium().ToString(), false, "no paso nada jeje");
-                        }
+                        if (ValidacionCantidadYStockDeCamisa(arr, mangaC, view, "MangaCortaCuelloMaoPremium")) return;
+                        //aplico aumento por ser premium del 30% y manda a la vista
+                        this.view.DisplayResult(mangaC.CalcularDescuentoMangaCortaYCuelloMaoPremium().ToString(), false, "no paso nada jeje");
                     }
                 }
                 #endregion
@@ -188,25 +147,17 @@ namespace Presenter
                     //si es entandard
                     if (bool.Parse(arr[4].ToString()))
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(chupin.CantChupinStandard.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                            //aplico descuento del 12% y mando a la vista
-                            this.view.DisplayResult(chupin.CalcularDescuentoChupin().ToString(), false, "no paso nada jeje");
+                        //validacion
+                        if (ValidacionCantidadYStockDePantalon(arr, chupin, view, "ChupinStandard"))return;
+                        //aplico descuento del 12% y mando a la vista
+                        this.view.DisplayResult(chupin.CalcularDescuentoChupin().ToString(), false, "no paso nada jeje");
                     }
                     else
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(chupin.CantChupinPremium.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                        {
-                            //aplico aumento del 30% por ser premium
-                            this.view.DisplayResult(chupin.CalcularDescuentoChupinMasPremium().ToString(), false, "no paso nada jeje");
-                        }
+                        if (ValidacionCantidadYStockDePantalon(arr, chupin, view, "ChupinPremium"))return;
+                        //aplico aumento del 30% por ser premium
+                        this.view.DisplayResult(chupin.CalcularDescuentoChupinMasPremium().ToString(), false, "no paso nada jeje");
+                        
                     }
                 }
                 //sino, es un pantalon comun
@@ -215,24 +166,17 @@ namespace Presenter
                     //si es entandard
                     if (bool.Parse(arr[4].ToString()))
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(pantalonComun.CantComunStandard.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                            this.view.DisplayResult(pantalonComun.CalcularPrecioUnitarioXCantidad().ToString(), false, "no paso nada jeje");
+                        if (ValidacionCantidadYStockDePantalon(arr, pantalonComun, view, "ComunStandard"))
+                            return;
+                        this.view.DisplayResult(pantalonComun.CalcularPrecioUnitarioXCantidad().ToString(), false, "no paso nada jeje");
                     }
                     else
                     {
-                        if (int.Parse(arr[5].ToString()) > int.Parse(pantalonComun.CantComunPremium.ToString()))
-                            EmitirError("La cantidad es mayor a la disponible", this.view);
-                        if (int.Parse(arr[5].ToString()) <= 0)
-                            EmitirError("La cantidad tiene que ser mayor que 0", this.view);
-                        else
-                        {
-                            //aplico aumento del 30% por ser premium
-                            this.view.DisplayResult(pantalonComun.CalcularAumentoPremium().ToString(), false, "no paso nada jeje");
-                        }
+                        if (ValidacionCantidadYStockDePantalon(arr, pantalonComun, view, "ComunPremium"))
+                            return;
+                        //aplico aumento del 30% por ser premium
+                        this.view.DisplayResult(pantalonComun.CalcularAumentoPremium().ToString(), false, "no paso nada jeje");
+                        
                     }
                 }
                 #endregion
@@ -255,6 +199,177 @@ namespace Presenter
         {
             obj.Stock = int.Parse(arr[5].ToString());
             obj.PrecioUnitario = int.Parse(arr[6].ToString());
+        }
+        private static bool ValidacionCantidadYStockDePantalon(ArrayList arr, Pantalon pantalon, IView view, string tipoPantalon)
+        {
+            bool error = false;
+            switch (tipoPantalon)
+            {
+                case "ChupinStandard":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(pantalon.CantChupinStandard.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "ComunStandard":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(pantalon.CantComunStandard.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "ChupinPremium":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(pantalon.CantChupinPremium.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "ComunPremium":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(pantalon.CantComunPremium.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+            }
+            return error;
+        }
+        private static bool ValidacionCantidadYStockDeCamisa(ArrayList arr, Camisa camisa, IView view, string tipoCamisa)
+        {
+            bool error = false;
+            switch (tipoCamisa)
+            {
+                #region Manga Larga
+                case "MangaLargaCuelloComunStandard":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloComunStandard.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "MangaLargaCuelloComunPremium":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloComunPremium.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "MangaLargaCuelloMaoStandard":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloMaoStandard.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "MangaLargaCuelloMaoPremium":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloMaoPremium.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+                #endregion
+                case "MangaCortaCuelloComunStandard":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloComunStandard.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "MangaCortaCuelloComunPremium":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloComunPremium.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "MangaCortaCuelloMaoStandard":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloMaoStandard.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+
+                case "MangaCortaCuelloMaoPremium":
+                    if (int.Parse(arr[5].ToString()) > int.Parse(camisa.CantCuelloMaoPremium.ToString()))
+                    {
+                        EmitirError("La cantidad es mayor a la disponible", view);
+                        error = true;
+                    }
+                    if (int.Parse(arr[5].ToString()) <= 0)
+                    {
+                        EmitirError("La cantidad tiene que ser mayor que 0", view);
+                        error = true;
+                    }
+                    break;
+            }
+            return error;
         }
         #endregion
     }

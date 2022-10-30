@@ -8,8 +8,12 @@ namespace Model
 {
     public class Tienda
     {
-        public string Nombre = "Distrito Moda";
-        public string Direccion = "Av. Garibaldi 1320";
-        public string ListadoPrendas = "Camisas y Pantalones";
+        private string nombre = "Distrito Moda";
+        private string direccion = "Av. Garibaldi 1320";
+        private string listadoPrendas = "Camisas y Pantalones";
+
+        public string Nombre { get => nombre; }
+        public string Direccion { get => direccion; }
+        public string ListadoPrendas { get => listadoPrendas; }
     }
 }

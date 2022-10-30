@@ -8,8 +8,12 @@ namespace Model
 {
     public class Vendedor
     {
-        public string Nombre = "Pedro";
-        public string Apellido = "Alfonso";
-        public string CodigoVendedor = "123789";
+        private string nombre = "Pedro";
+        private string apellido = "Alfonso";
+        private string codigoVendedor = "123789";
+
+        public string Nombre { get => nombre; }
+        public string Apellido { get => apellido; }
+        public string CodigoVendedor { get => codigoVendedor; }
     }
 }

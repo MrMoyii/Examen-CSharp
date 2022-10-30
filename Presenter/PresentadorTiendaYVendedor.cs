@@ -8,19 +8,20 @@ using Model;
 
 namespace Presenter
 {
-    public class DatosTiendaYVendedor
+    public class PresentadorTiendaYVendedor
     {
         Vendedor vendedor;
         Tienda tienda;
         private IView view;
-        public DatosTiendaYVendedor(IView view)
+        public PresentadorTiendaYVendedor(IView view)
         {
+            this.view = view;
             tienda = new Tienda();
             vendedor = new Vendedor();
             ArrayList arrData = new ArrayList();
             AlamcenarDatosTiendaYVendedor(arrData, tienda, vendedor);
 
-            view.DisplayData(arrData);
+            this.view.DisplayData(arrData);
         }
 
         //tomo los datos del modelo y los almaceno en un ArrayList

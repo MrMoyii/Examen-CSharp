@@ -16,12 +16,12 @@ namespace Presenter
         public PresentadorStock(IView view)
         {
             this.view = view;
-            ArrayList arr = new ArrayList();
-            arr = this.view.GetInputValues();
+            ArrayList arr = this.view.GetInputValues();
 
             //si es standard
             if (bool.Parse(arr[4].ToString()))
             {
+<<<<<<< HEAD
                 //si se chequeo Camisa
                 if (bool.Parse(arr[0].ToString()))
                 {
@@ -66,16 +66,80 @@ namespace Presenter
             {
                 case "int":
                     return int.TryParse(dato.ToString(), out _);
+=======
+                MangaLarga mangaL = new MangaLarga();
+                MangaCorta mangaC = new MangaCorta();
 
-                case "string":
-
-                    if (string.IsNullOrEmpty(dato.ToString().Trim()))
-                        return false;
+                #region Logica Camisa
+                //si no se marco nada
+                if (!bool.Parse(arr[2].ToString()) && !bool.Parse(arr[1].ToString()))
+                {
+                    if (bool.Parse(arr[4].ToString()))
+                        view.DisplayStockPremium(mangaL.CantCuelloComunStandard.ToString());
                     else
-                        return true;
+                        view.DisplayStockPremium(mangaL.CantCuelloComunPremium.ToString());
+                    view.DisplayStock(mangaL.CantCuelloComun.ToString());
+                }
+                //si se marco Cuello Mao unicamente--> muestro manga larga con cuello mao
+                if (bool.Parse(arr[2].ToString()) && !bool.Parse(arr[1].ToString()))
+                {
+                    if (bool.Parse(arr[4].ToString()))
+                        view.DisplayStockPremium(mangaL.CantCuelloMaoStandard.ToString());
+                    else
+                        view.DisplayStockPremium(mangaL.CantCuelloMaoPremium.ToString());
+                    view.DisplayStock(mangaL.CantCuelloMao.ToString());
+                }
+                //si se marco Manga corta && Cuello Mao
+                if (bool.Parse(arr[1].ToString()) && bool.Parse(arr[2].ToString()))
+                {
+                    //si es standar muestra en la vista
+                    if (bool.Parse(arr[4].ToString()))
+                        view.DisplayStockPremium(mangaC.CantCuelloMaoStandard.ToString());
+                    else
+                        view.DisplayStockPremium(mangaC.CantCuelloMaoPremium.ToString());
+                    view.DisplayStock(mangaC.CantCuelloMao.ToString());
+                }
+                //si se marco Manga corta unicamente--> muestro manga corta con cuello comun
+                if (bool.Parse(arr[1].ToString()) && !bool.Parse(arr[2].ToString()))
+                {
+                    if (bool.Parse(arr[4].ToString()))
+                        view.DisplayStockPremium(mangaC.CantCuelloComunStandard.ToString());
+                    else
+                        view.DisplayStockPremium(mangaC.CantCuelloComunPremium.ToString());
+                    view.DisplayStock(mangaC.CantCuelloComun.ToString());
+                }
+                #endregion
+            }
+            //sino, se chequeo el pantalon
+            else
+            {
+                Chupin chupin = new Chupin();
+                Comun pantalonComun = new Comun();
+>>>>>>> 774241a
 
-                default:
-                    return false;
+                #region Logica Pantalon
+                //si se marco chupin
+                if (bool.Parse(arr[3].ToString()))
+                {
+                    //si es entandard
+                    if (bool.Parse(arr[4].ToString()))
+                        view.DisplayStockPremium(chupin.CantChupinStandard.ToString());
+                    else
+                        view.DisplayStockPremium(chupin.CantChupinPremium.ToString());
+                    //muestra stock
+                    view.DisplayStock(chupin.CantChupin.ToString());
+                }
+                else
+                {
+                    //si es entandard
+                    if (bool.Parse(arr[4].ToString()))
+                        view.DisplayStockPremium(pantalonComun.CantComunStandard.ToString());
+                    else
+                        view.DisplayStockPremium(pantalonComun.CantComunPremium.ToString());
+                    //muestra stock
+                    view.DisplayStock(pantalonComun.CantComun.ToString());
+                }
+                #endregion
             }
         }
     }
